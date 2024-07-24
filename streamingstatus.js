@@ -1,3 +1,7 @@
+const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
+
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
@@ -13,3 +17,8 @@ client.once('ready', () => {
 
     console.log('Bot activity set to STREAMING');
 });
+
+// paste token
+const token = '';
+
+client.login(token);
